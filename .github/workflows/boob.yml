@@ -1,4 +1,4 @@
-name: Build PososalChlen1488
+name: Build Karnal sur
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
       run: |
       fastfetch
 
-    - name: Build karnal sur
+    - name: Build PososalChlen1337
       run: |
         python3 build.py
 
