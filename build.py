@@ -19,7 +19,7 @@ DTB = KERNEL_DIR / "out/arch/arm64/boot/dts/qcom/cust-atoll-ab.dtb"
 
 VERBOSE = 0
 ZIPNAME = "PososalChlen1337"
-COMPILER = "aosp"
+COMPILER = "asop"
 LINKER = "ld.lld"
 LOG_FILE = KERNEL_DIR / "log.txt"
 ANYKERNEL_DIR = KERNEL_DIR / "AnyKernel3"
