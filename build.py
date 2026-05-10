@@ -18,7 +18,7 @@ DTBO = KERNEL_DIR / "out/arch/arm64/boot/dtbo.img"
 DTB = KERNEL_DIR / "out/arch/arm64/boot/dts/qcom/cust-atoll-ab.dtb"
 
 VERBOSE = 0
-ZIPNAME = "RedCherry"
+ZIPNAME = "PososalChlen1337"
 COMPILER = "aosp"
 LINKER = "ld.lld"
 LOG_FILE = KERNEL_DIR / "log.txt"
@@ -70,7 +70,7 @@ def get_timestamp():
 
 def clean_previous_files():
     log("Cleaning previous kernel files and build environment...")
-    for file in ANYKERNEL_DIR.glob("RedCherry-kernel*.zip"):
+    for file in ANYKERNEL_DIR.glob("PososalChlen1337-kernel*.zip"):
         file.unlink()
     for file in ["Image.gz", "dtbo.img"]:
         (ANYKERNEL_DIR / file).unlink(missing_ok=True)
@@ -125,8 +125,8 @@ def set_env_vars():
         "KBUILD_COMPILER_STRING": clang_version,
         "ARCH": "arm64",
         "SUBARCH": "arm64",
-        "KBUILD_BUILD_HOST": "Linux",
-        "KBUILD_BUILD_USER": "CRUECY",
+        "KBUILD_BUILD_HOST": "Linus",
+        "KBUILD_BUILD_USER": "danyyok",
         "DISTRO": subprocess.getoutput(". /etc/os-release && echo $NAME"),
         "PATH": f"{KERNEL_DIR}/clang/bin:{KERNEL_DIR}/gcc/bin:{KERNEL_DIR}/gcc32/bin:" + os.environ["PATH"]
     })
@@ -192,7 +192,6 @@ def main():
     zip_kernel(final_zip)
 
     log("Script completed successfully. Press Enter to exit...")
-    input()
 
 if __name__ == "__main__":
     main()
